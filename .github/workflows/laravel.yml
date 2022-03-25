@@ -68,5 +68,3 @@ jobs:
             run: su user
           - name: test2
             run: cd /var/www/html/
-          - name: test3
-            run: pwd
