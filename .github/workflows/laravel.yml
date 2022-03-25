@@ -62,8 +62,9 @@ jobs:
         with: 
           host: ${{ secrets.SSH_HOST }} 
           username: ${{ secrets.SSH_USERNAME }} 
-          password: ${{ secrets.SSH_PRIVATE_KEY }}
+          password: ${{ secrets.SSH_PASSWORD }}
           script: |
+            su user
             cd /var/www/html/
             git checkout -f 
             git pull origin main
