@@ -64,4 +64,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }} 
           password: ${{ secrets.SSH_PASSWORD }}
           timeout: ${{ secrets.SSH_TIMEOUT }}
-          script: whoami
+          run: |
+            su user
+            cd /var/www/html/
+            pwd
