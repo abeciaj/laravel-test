@@ -7,17 +7,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy Laravel APP
-        uses: appleboy/ssh-action@v0.1.4
-        with:
-          host: ${{secrets.SSH_HOST}}          
-          username: ${{ secrets.SSH_USER}}
-          password: ${{secrets.SSH_PASS}}
-          port: ${{ secrets.PORT }}
-
-          script: |
-            whoami
-            pwd
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: whoami
 
 
 
