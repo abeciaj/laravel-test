@@ -60,7 +60,15 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASS }}
           script: |
-            su user
-            cd /var/www/html/
-            git checkout -f 
-            git pull origin master
+            whoami
+            pwd
+        # uses: appleboy/ssh-action@master
+        # with:
+        #   host: ${{ secrets.SSH_HOST }}
+        #   username: ${{ secrets.SSH_USER }}
+        #   password: ${{ secrets.SSH_PASS }}
+        #   script: |
+        #     su user
+        #     cd /var/www/html/
+        #     git checkout -f 
+        #     git pull origin master
