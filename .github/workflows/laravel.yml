@@ -61,7 +61,7 @@ jobs:
           password: ${{ secrets.SSH_PASS }}
           script: |
             su user
-            cd /var/www/html/
+            cd /var/www/html/laravel-test
             git checkout -f 
             git pull origin master
         # uses: appleboy/ssh-action@master
