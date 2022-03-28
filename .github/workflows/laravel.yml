@@ -63,7 +63,7 @@ jobs:
             su user
             cd /var/www/html/laravel-test
             git checkout -f 
-            git pull origin master
+            git pull origin main
         # uses: appleboy/ssh-action@master
         # with:
         #   host: ${{ secrets.SSH_HOST }}
